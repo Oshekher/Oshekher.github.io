@@ -20,6 +20,7 @@ body
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+  background: #297eff;
 }
 ul
 {
@@ -73,42 +74,6 @@ ul li:nth-child(6n+6) a:before
 {
   background: #ffeaa7;
 }
-.box {
-  position: fixed;
-  top: 0;
-  transform: rotate(80deg); 
-  left: 0;
-}
-
-.wave {
-  position: absolute;
-  opacity: .4;
-  width: 1500px;
-  height: 1300px;
-  margin-left: -150px;
-  margin-top: -250px;
-  border-radius: 43%;
-}
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
-}
-.wave.-one {
-  animation: rotate 7000ms infinite linear;
-  opacity: .1;
-  background: #0af;
-}
-
-.wave.-two {
-  animation: rotate 3000ms infinite linear;
-  opacity: .1;
-  background: black;
-}
-
-.wave.-three {
-  animation: rotate 7500ms infinite linear;
-  background-color: #77daff;
-}
 </style>
 </head>
 <body>
@@ -119,11 +84,5 @@ ul li:nth-child(6n+6) a:before
 		<li><a href="https://github.com/TeamNewPipe/NewPipe/releases/" data-text="NewPipe">NewPipe</a></li>
 		<li><a href="https://github.com/SkyTubeTeam/SkyTube/releases/" data-text="SkyTube">SkyTube</a></li>
 		<li><a href="https://t.me/PurityWasHere" data-text="Contact">Contact</a></li>
-	</ul>
-          <div class='box'>
-          <div class='wave -one'></div>
-          <div class='wave -two'></div>
-          <div class='wave -three'></div>
-      </div>
 </body>
 </html>
