@@ -62,3 +62,92 @@ h4 img {width:24px;height:24px;vertical-align: top;}
   h4 {font-size:18px}
   h4 img {width:18px;height:18px}
 }
+:root {
+  --navHeight: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.switch {
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch div {
+  position: relative;
+  display: block;
+  background: #eee;
+  width: 30px;
+  border-radius: 50px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.fa-adjust {
+  transform: rotate(180deg);
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #999;
+  transition: 0.4s;
+  border-radius: 34px;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  position: relative;
+}
+
+input:checked + .slider {
+  transform: translateX(8px);
+}
+
+nav {
+  background: #d2cca1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  height: var(--navHeight);
+  padding: 0 10px;
+}
+
+nav ul li {
+  padding: 12px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+  position: relative;
+}
+
+nav ul li:hover {
+  background-color: #dedaba;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: #e5c687;
+  height: calc(100vh - var(--navHeight));
+}
