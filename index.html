@@ -55,5 +55,14 @@
 <div class=footer>Edited by Saksham Shekher</a></div>
     </div> <!--Container-->
     <div class="pattern"></div>
+PullToRefresh.init({
+  mainElement: '#main', // above which element?
+  onRefresh: function (done) {
+    setTimeout(function () {
+      done(); // end pull to refresh
+      alert('refresh');
+    }, 1500);
+  }
+});
   </body>
 </html>
