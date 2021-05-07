@@ -69,11 +69,8 @@ h4 img {width:24px;height:24px;vertical-align: top;}
   margin: 0;
   padding: 0;
 }
-.fa-adjust {
-  transform: rotate(180deg);
-}
 nav {
-  background: #d2cca1;
+  background: #000000;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
   position: relative;
