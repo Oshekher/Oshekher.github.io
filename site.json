@@ -72,12 +72,6 @@
         "icon": "iconfont icon-iqiyi"
     },
     {
-        "name": "阿里云",
-        "url": "https://www.aliyun.com",
-        "color": "ff6a00",
-        "icon": "iconfont icon-aliyun"
-    },
-    {
         "name": "Maps",
         "url": "https://maps.google.com",
         "color": "8bc34a",
@@ -88,42 +82,6 @@
         "url": "https://www.cloudflare.com",
         "color": "f38020",
         "icon": "iconfont icon-cloudflare"
-    },
-    {
-        "name": "知乎",
-        "url": "https://www.zhihu.com/=",
-        "color": "0084ff",
-        "icon": "iconfont icon-zhihu"
-    },
-    {
-        "name": "少数派",
-        "url": "https://sspai.com",
-        "color": "c13032",
-        "icon": "iconfont icon-sspai"
-    },
-    {
-        "name": "掘金",
-        "url": "https://juejin.im",
-        "color": "007fff",
-        "icon": "iconfont icon-juejin"
-    },
-    {
-        "name": "思否",
-        "url": "https://segmentfault.com",
-        "color": "009a61",
-        "icon": "iconfont icon-segmentf"
-    },
-    {
-        "name": "腾讯视频",
-        "url": "https://v.qq.com",
-        "color": "a9e652",
-        "icon": "iconfont icon-tencent-video"
-    },
-    {
-        "name": "ACFun",
-        "url": "https://www.acfun.cn",
-        "color": "fd4c5d",
-        "icon": "iconfont icon-acfun"
     },
     {
         "name": "Pixiv",
