@@ -1,31 +1,31 @@
 [
     {
-        "name": "翻译",
-        "url": "https://fanyi.baidu.com",
+        "name": "Translate",
+        "url": "https://translate.google.com",
         "icon": "fa fa-language",
         "color": "4395ff"
     },
     {
-        "name": "京东",
-        "url": "https://www.jd.com",
+        "name": "Vanced",
+        "url": "https://github.com/YTVanced/VancedManager/releases",
         "icon": "iconfont icon-jd",
         "color": "d92610"
     },
     {
-        "name": "淘宝",
-        "url": "https://www.taobao.com",
+        "name": "PureTuber",
+        "url": "https://play.google.com/store/apps/details?id=free.tube.premium.advanced.tuber",
         "icon": "iconfont icon-taobao",
         "color": "ff8300"
     },
     {
-        "name": "贴吧",
-        "url": "https://tieba.baidu.com",
+        "name": "SkyTube",
+        "url": "https://github.com/SkyTubeTeam/SkyTube/releases",
         "icon": "iconfont icon-tieba",
         "color": "3385ff"
     },
     {
-        "name": "微博",
-        "url": "https://weibo.com",
+        "name": "NewPipe",
+        "url": "https://github.com/TeamNewPipe/NewPipe/releases",
         "color": "fa2f2f",
         "icon": "iconfont icon-weibo"
     },
