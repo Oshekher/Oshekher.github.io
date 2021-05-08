@@ -6,26 +6,26 @@
         "color": "4395ff"
     },
     {
-        "name": "Covid",
-        "url": "https://www.covid19india.org/",
-        "icon": "fas fa-viruses",
+        "name": "Vanced",
+        "url": "https://github.com/YTVanced/VancedManager/releases/",
+        "icon": "fa fa-youtube-play",
         "color": "d92610"
     },
     {
-        "name": "淘宝",
-        "url": "https://www.taobao.com",
-        "icon": "iconfont icon-taobao",
+        "name": "PureTuber",
+        "url": "https://play.google.com/store/apps/details?id=free.tube.premium.advanced.tuber",
+        "icon": ""fa fa-youtube",
         "color": "ff8300"
     },
     {
-        "name": "贴吧",
-        "url": "https://tieba.baidu.com",
-        "icon": "iconfont icon-tieba",
+        "name": "SkyTube",
+        "url": "https://github.com/SkyTubeTeam/SkyTube/releases/",
+        "icon": "fa fa-youtube-square",
         "color": "3385ff"
     },
     {
-        "name": "微博",
-        "url": "https://weibo.com",
+        "name": "NewPipe",
+        "url": "https://github.com/TeamNewPipe/NewPipe/releases/",
         "color": "fa2f2f",
         "icon": "iconfont icon-weibo"
     },
