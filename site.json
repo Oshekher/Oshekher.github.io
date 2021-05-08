@@ -36,7 +36,7 @@
         "color": "00a1d6"
     },
     {
-        "name": "Particle Brush",
+        "name": "Particle",
         "url": "https://ytmods.ga/ParticleBrush",
         "icon": "iconfont icon-qqmail",
         "color": "4d7be6"
@@ -66,7 +66,7 @@
         "icon": "iconfont icon-youku"
     },
     {
-        "name": "TorrentSearch",
+        "name": "Torrent",
         "url": "https://www.torrentsearch.ml",
         "color": "00be06",
         "icon": "iconfont icon-iqiyi"
@@ -120,7 +120,7 @@
         "icon": "iconfont icon-ubuntu"
     },
     {
-        "name": "fontawesome",
+        "name": "fonts",
         "url": "https://fontawesome.com",
         "color": "ea4519",
         "icon": "iconfont icon-iconfont"
