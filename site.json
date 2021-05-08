@@ -8,19 +8,19 @@
     {
         "name": "Vanced",
         "url": "https://github.com/YTVanced/VancedManager/releases/",
-        "icon": "fa fa-youtube-play",
+        "icon": "iconfont icon-jd",
         "color": "d92610"
     },
     {
         "name": "PureTuber",
         "url": "https://play.google.com/store/apps/details?id=free.tube.premium.advanced.tuber",
-        "icon": ""fa fa-youtube",
+        "icon": ""iconfont icon-taobao",
         "color": "ff8300"
     },
     {
         "name": "SkyTube",
         "url": "https://github.com/SkyTubeTeam/SkyTube/releases/",
-        "icon": "fa fa-youtube-square",
+        "icon": "iconfont icon-tieba",
         "color": "3385ff"
     },
     {
