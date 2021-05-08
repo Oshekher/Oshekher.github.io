@@ -26,8 +26,8 @@
     {
         "name": "NewPipe",
         "url": "https://github.com/TeamNewPipe/NewPipe/releases/",
-        "color": "fa2f2f",
         "icon": "iconfont icon-weibo"
+        "color": "fa2f2f",
     },
     {
         "name": "哔哩哔哩",
