@@ -56,14 +56,14 @@ var data = {
     ],
     search_method: [
         {
-            "name": "Google",
-            "icon": "google",
-            "url": "https://www.google.com/search?q=%s"
-        },
-        {
             "name": "Baidu",
             "icon": "baidu",
             "url": "https://www.baidu.com/s?wd=%s"
+        },
+        {
+            "name": "Google",
+            "icon": "google",
+            "url": "https://www.google.com/search?q=%s"
         },
         {
             "name": "Bing",
