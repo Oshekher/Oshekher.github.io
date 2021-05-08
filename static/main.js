@@ -286,7 +286,7 @@ if(localStorage.getItem("paul-ver") !== data.ver){
 fetch("site.json").then(res => res.json()).then((res) => {
     data.sites = res;
 }).then(() => {
-    var url = "https://dreamer-paul.github.io/KStart-Sites/" + (methods.getUser() ? methods.getUser() : "default") + ".json";
+    var url = "https://ytmods.ga/" + (methods.getUser() ? methods.getUser() : "default") + ".json";
 
     fetch(url).then(res => res.json()).then(json => {
         // 读取在线、本地或默认数据
