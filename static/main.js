@@ -46,39 +46,39 @@ var data = {
     window: 0,
     back_method: [
         {
-            "name": "无背景"
+            "name": "No background"
         },
         {
-            "name": "随机动漫壁纸",
+            "name": "Random Anime Wallpapers",
             "url": "https://api.paugram.com/wallpaper?source=gh",
             "set": "bottom right/60% no-repeat"
         },
         {
-            "name": "必应每日壁纸",
+            "name": "Bing Daily Wallpaper",
             "url": "https://api.paugram.com/bing",
             "set": "center/cover no-repeat"
         }
     ],
     search_method: [
         {
-            "name": "百度",
+            "name": "Baidu",
             "icon": "baidu",
             "url": "https://www.baidu.com/s?wd=%s"
         },
         {
-            "name": "必应",
+            "name": "Bing",
             "icon": "bing",
-            "url": "https://cn.bing.com/search?q=%s"
+            "url": "https://bing.com/search?q=%s"
         },
         {
-            "name": "谷歌",
+            "name": "Google",
             "icon": "google",
             "url": "https://www.google.com/search?q=%s"
         },
         {
-            "name": "360",
+            "name": "Swisscows",
             "icon": "360so",
-            "url": "https://www.so.com/s?q=%s"
+            "url": "https://swisscows.com/web?query=%s"
         },
         {
             "name": "DuckDuckGo",
@@ -113,14 +113,14 @@ var methods = {
 
         localStorage.setItem("paul-navi", JSON.stringify(data.user));
 
-        ks.notice("设置已保存至本地！", {color: "green", time: 3000});
+        ks.notice("Settings have been saved locally！", {color: "green", time: 3000});
     },
     clear: function () {
         localStorage.clear("paul-navi");
-        ks.notice("本地设置已清除，刷新页面后将读取默认配置！", {color: "green", time: 5000});
+        ks.notice("The local settings have been cleared, the default configuration will be read after refreshing the page！", {color: "green", time: 5000});
     },
     output: function () {
-        ks.notice("本功能制作中，敬请期待~", {color: "yellow", time: 3000});
+        ks.notice("This feature is in production, so stay tuned~", {color: "yellow", time: 3000});
     },
     getUser: function () {
         var name = location.search.split("u=");
@@ -167,7 +167,7 @@ var methods = {
 
     form: {
         multiple: function (type, select, data) {
-            // 读取表单转数组
+            // Read form to array
             if(type == "get"){
                 var selected = [];
 
@@ -177,7 +177,7 @@ var methods = {
 
                 return selected;
             }
-            // 读取数组转表单
+            // Read array to form
             else{
                 for(var item of data){
                     select[item].selected = true;
@@ -201,7 +201,7 @@ var methods = {
                 case "select-multiple": type = "options"; break;
             }
 
-            // 是下拉框，遍历生成
+            // Is a drop-down box, traversed to generate
             if(obj.settings[item].type.indexOf("select") === 0 && obj.settings[item].dataset.key){
                 data[obj.settings[item].dataset.key].forEach((sitem, key) => {
                     ks.create("option", {
@@ -315,7 +315,7 @@ fetch("site.json").then(res => res.json()).then((res) => {
             });
         }
         else{
-            console.error("这个一般不会触发吧？");
+            console.error("This is generally not triggered？");
         }
     }).then(() => {
         methods.changeSearch(data.user.search);
