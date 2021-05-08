@@ -1,13 +1,8 @@
 /* ----
 
 # KStart
-# By: Dreamer-Paul
-# Last Update: 2020.6.6
-
-一个简洁不失细节的起始页
-
-本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
-
+# By: Saksham Shekher
+# Last Update: 2021.5.8
 ---- */
 
 var obj = {
