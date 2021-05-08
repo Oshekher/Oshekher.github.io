@@ -4,9 +4,9 @@
 # By: Dreamer-Paul
 # Last Update: 2020.6.6
 
-A concise start page without losing details
+一个简洁不失细节的起始页
 
-This code is original by Troll Paul and complies with the MIT open source agreement. Welcome to my blog: https://paugram.com
+本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
 
 ---- */
 
@@ -46,15 +46,15 @@ var data = {
     window: 0,
     back_method: [
         {
-            "name": "No background"
+            "name": "无背景"
         },
         {
-            "name": "Random Anime Wallpaper",
+            "name": "随机动漫壁纸",
             "url": "https://api.paugram.com/wallpaper?source=gh",
             "set": "bottom right/60% no-repeat"
         },
         {
-            "name": "Bing Daily Wallpaper",
+            "name": "必应每日壁纸",
             "url": "https://api.paugram.com/bing",
             "set": "center/cover no-repeat"
         }
@@ -113,14 +113,14 @@ var methods = {
 
         localStorage.setItem("paul-navi", JSON.stringify(data.user));
 
-        ks.notice("The settings have been saved locally!", {color: "green", time: 3000});
+        ks.notice("设置已保存至本地！", {color: "green", time: 3000});
     },
     clear: function () {
         localStorage.clear("paul-navi");
-        ks.notice("The local settings have been cleared, the default configuration will be read after refreshing the page!", {color: "green", time: 5000});
+        ks.notice("本地设置已清除，刷新页面后将读取默认配置！", {color: "green", time: 5000});
     },
     output: function () {
-        ks.notice("This feature is in production, please look forward to it~", {color: "yellow", time: 3000});
+        ks.notice("本功能制作中，敬请期待~", {color: "yellow", time: 3000});
     },
     getUser: function () {
         var name = location.search.split("u=");
@@ -167,7 +167,7 @@ var methods = {
 
     form: {
         multiple: function (type, select, data) {
-            // read form to array
+            // 读取表单转数组
             if(type == "get"){
                 var selected = [];
 
@@ -177,7 +177,7 @@ var methods = {
 
                 return selected;
             }
-            // read array to form
+            // 读取数组转表单
             else{
                 for(var item of data){
                     select[item].selected = true;
@@ -201,7 +201,7 @@ var methods = {
                 case "select-multiple": type = "options"; break;
             }
 
-            // is a drop-down box, traversed to generate
+            // 是下拉框，遍历生成
             if(obj.settings[item].type.indexOf("select") === 0 && obj.settings[item].dataset.key){
                 data[obj.settings[item].dataset.key].forEach((sitem, key) => {
                     ks.create("option", {
@@ -225,11 +225,11 @@ var methods = {
                 }
             }
             else{
-                // Set up the form
+                // 设置表单
                 methods.form.multiple("set", obj.settings[item], set[item]);
 
                 obj.settings[item].onchange = function (ev) {
-                    // read the form
+                    // 读取表单
                     data.user[i] = methods.form.multiple("get", obj.settings[i], set[item]);
 
                     methods.set();
@@ -239,7 +239,7 @@ var methods = {
     }
 }
 
-// search for
+// 搜索
 obj.main.select.onclick = function () {
     obj.main.search.classList.toggle("active");
 }
@@ -248,7 +248,7 @@ obj.main.submit.onclick = (e) => {
     window.open(data.search_method[data.user.search].url.replace("%s", obj.main.input.value));
 }
 
-// Open button
+// 打开按钮
 obj.header.updated.onclick = function () {
     methods.openWindow(0);
     localStorage.setItem("paul-ver", data.ver);
@@ -261,14 +261,14 @@ obj.header.setting.onclick = function () {
     methods.openWindow(2);
 }
 
-// close the panel
+// 关闭面板
 obj.window.wrap.onclick = function (e) {
     if(e.target == obj.window.wrap){
         methods.closeWindow2();
     }
 }
 
-// close button
+// 关闭按钮
 obj.window.close.each((item) => {
     item.onclick = methods.closeWindow2;
 })
@@ -282,40 +282,40 @@ data.search_method.forEach((item, key) => {
     a.onclick = () => methods.changeSearch(key);
 })
 
-// reset button
+// 重置按钮
 obj.settingBtn.reset.onclick = methods.clear;
 obj.settingBtn.output.onclick = methods.output;
 
-// Version update prompt
+// 版本更新提示
 if(localStorage.getItem("paul-ver") !== data.ver){
     obj.header.updated.classList.add("active");
 }
 
-// Initialize
+// 初始化
 fetch("site.json").then(res => res.json()).then((res) => {
     data.sites = res;
 }).then(() => {
     var url = "https://dreamer-paul.github.io/KStart-Sites/" + (methods.getUser() ? methods.getUser() : "default") + ".json";
 
     fetch(url).then(res => res.json()).then(json => {
-        // read online, local or default data
+        // 读取在线、本地或默认数据
         methods.get(json);
 
-        // User-defined site
+        // 用户自定义站点
         if(json.custom){
             json.custom.forEach((item) => {
                 obj.main.sites.appendChild(methods.createItem(item));
             });
         }
 
-        // in case
+        // 如果
         if(data.user.sites.length){
             data.user.sites.forEach((item) => {
                 obj.main.sites.appendChild(methods.createItem(data.sites[item]));
             });
         }
         else{
-            console.error("This is generally not triggered, right?");
+            console.error("这个一般不会触发吧？");
         }
     }).then(() => {
         methods.changeSearch(data.user.search);
