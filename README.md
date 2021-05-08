@@ -13,17 +13,25 @@
 * Make your changes in `cname` and `m` folder.
 * Deploy in git page or web hosting.
 
+## Changes till now
+
+* Translated to English.
+* Changed Links
+* Added New Search Engine: swisscows
+
 ## Upcoming Changes
 
 * Icons from other websites for better view.
 * Adding More Features from other repos.
+* Adding More Privacy Based Search Engine.
+* Setting to be fixed.
 
 ## Credits
 
-* Source: [OpenBullet](https://github.com/openbullet/openbullet.github.io)
+* Source: [Kstart](https://github.com/Dreamer-Paul/KStart)
 * New Design: [YouTube]
 * GitHub: Pages
-* Icons made by [Flaticon](https://www.flaticon.com)
+* Icons made by [iconfont](https://www.iconfont.cn)
 
 ## Disclaimer
 
