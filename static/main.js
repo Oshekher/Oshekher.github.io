@@ -1,8 +1,9 @@
 /* ----
-
 # KStart
-# By: Saksham Shekher
-# Last Update: 2021.5.8
+# By: Dreamer-Paul
+# Last Update: 2020.6.6
+一个简洁不失细节的起始页
+本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
 ---- */
 
 var obj = {
@@ -103,14 +104,14 @@ var methods = {
 
         localStorage.setItem("paul-navi", JSON.stringify(data.user));
 
-        ks.notice("Settings have been saved locally！", {color: "green", time: 3000});
+        ks.notice("设置已保存至本地！", {color: "green", time: 3000});
     },
     clear: function () {
         localStorage.clear("paul-navi");
-        ks.notice("The local settings have been cleared, the default configuration will be read after refreshing the page！", {color: "green", time: 5000});
+        ks.notice("本地设置已清除，刷新页面后将读取默认配置！", {color: "green", time: 5000});
     },
     output: function () {
-        ks.notice("This feature is in production, so stay tuned~", {color: "yellow", time: 3000});
+        ks.notice("本功能制作中，敬请期待~", {color: "yellow", time: 3000});
     },
     getUser: function () {
         var name = location.search.split("u=");
@@ -157,7 +158,7 @@ var methods = {
 
     form: {
         multiple: function (type, select, data) {
-            // Read form to array
+            // 读取表单转数组
             if(type == "get"){
                 var selected = [];
 
@@ -167,7 +168,7 @@ var methods = {
 
                 return selected;
             }
-            // Read array to form
+            // 读取数组转表单
             else{
                 for(var item of data){
                     select[item].selected = true;
@@ -191,7 +192,7 @@ var methods = {
                 case "select-multiple": type = "options"; break;
             }
 
-            // Is a drop-down box, traversed to generate
+            // 是下拉框，遍历生成
             if(obj.settings[item].type.indexOf("select") === 0 && obj.settings[item].dataset.key){
                 data[obj.settings[item].dataset.key].forEach((sitem, key) => {
                     ks.create("option", {
@@ -305,7 +306,7 @@ fetch("site.json").then(res => res.json()).then((res) => {
             });
         }
         else{
-            console.error("This is generally not triggered？");
+            console.error("这个一般不会触发吧？");
         }
     }).then(() => {
         methods.changeSearch(data.user.search);
