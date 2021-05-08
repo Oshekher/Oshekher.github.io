@@ -1,14 +1,14 @@
 [
     {
-        "name": "translation",
+        "name": "Translate",
         "url": "https://translate.google.com",
         "icon": "fa fa-language",
         "color": "4395ff"
     },
     {
-        "name": "Vanced",
-        "url": "https://github.com/YTVanced/VancedManager/releases/",
-        "icon": "https://vancedapp.com/static/media/logo.866a4e0b.svg",
+        "name": "Covid",
+        "url": "https://www.covid19india.org/",
+        "icon": "fas fa-viruses",
         "color": "d92610"
     },
     {
