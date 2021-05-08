@@ -56,6 +56,11 @@ var data = {
     ],
     search_method: [
         {
+            "name": "Google",
+            "icon": "google",
+            "url": "https://www.google.com/search?q=%s"
+        },
+        {
             "name": "Baidu",
             "icon": "baidu",
             "url": "https://www.baidu.com/s?wd=%s"
@@ -64,11 +69,6 @@ var data = {
             "name": "Bing",
             "icon": "bing",
             "url": "https://bing.com/search?q=%s"
-        },
-        {
-            "name": "Google",
-            "icon": "google",
-            "url": "https://www.google.com/search?q=%s"
         },
         {
             "name": "Swisscows",
