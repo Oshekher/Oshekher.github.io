@@ -1,14 +1,14 @@
 [
     {
-        "name": "翻译",
-        "url": "https://fanyi.baidu.com",
+        "name": "translation",
+        "url": "https://translate.google.com",
         "icon": "fa fa-language",
         "color": "4395ff"
     },
     {
-        "name": "京东",
-        "url": "https://www.jd.com",
-        "icon": "iconfont icon-jd",
+        "name": "Vanced",
+        "url": "https://github.com/YTVanced/VancedManager/releases/",
+        "icon": "https://vancedapp.com/static/media/logo.866a4e0b.svg",
         "color": "d92610"
     },
     {
