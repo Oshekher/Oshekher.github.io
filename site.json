@@ -8,13 +8,13 @@
     {
         "name": "Vanced",
         "url": "https://github.com/YTVanced/VancedManager/releases",
-        "icon": "iconfont icon-video",
+        "icon": "iconfont icon-jd",
         "color": "d92610"
     },
     {
         "name": "PureTuber",
         "url": "https://play.google.com/store/apps/details?id=free.tube.premium.advanced.tuber",
-        "icon": "iconfont icon-youtube",
+        "icon": "iconfont icon-tencent-video",
         "color": "ff8300"
     },
     {
@@ -44,7 +44,7 @@
     {
         "name": "T to H",
         "url": "https://ytmods.ga/text-to-handwriting",
-        "icon": "iconfont icon-guide",
+        "icon": "iconfont icon-netease",
         "color": "15943b"
     },
     {
