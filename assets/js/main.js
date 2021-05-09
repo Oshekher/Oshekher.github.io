@@ -1,26 +1,34 @@
-/*==================== SHOW NAVBAR ====================*/
-const showMenu = (headerToggle, navbarId) =>{
-    const toggleBtn = document.getElementById(headerToggle),
-    nav = document.getElementById(navbarId)
-    
-    // Validate that variables exist
-    if(headerToggle && navbarId){
-        toggleBtn.addEventListener('click', ()=>{
-            // We add the show-menu class to the div tag with the nav__menu class
-            nav.classList.toggle('show-menu')
+/*===== SHOW NAVBAR  =====*/ 
+const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId),
+    bodypd = document.getElementById(bodyId),
+    headerpd = document.getElementById(headerId)
+
+    // Validate that all variables exist
+    if(toggle && nav && bodypd && headerpd){
+        toggle.addEventListener('click', ()=>{
+            // show navbar
+            nav.classList.toggle('show')
             // change icon
-            toggleBtn.classList.toggle('bx-x')
+            toggle.classList.toggle('bx-x')
+            // add padding to body
+            bodypd.classList.toggle('body-pd')
+            // add padding to header
+            headerpd.classList.toggle('body-pd')
         })
     }
 }
-showMenu('header-toggle','navbar')
 
-/*==================== LINK ACTIVE ====================*/
+showNavbar('header-toggle','nav-bar','body-pd','header')
+
+/*===== LINK ACTIVE  =====*/ 
 const linkColor = document.querySelectorAll('.nav__link')
 
 function colorLink(){
-    linkColor.forEach(l => l.classList.remove('active'))
-    this.classList.add('active')
+    if(linkColor){
+        linkColor.forEach(l=> l.classList.remove('active'))
+        this.classList.add('active')
+    }
 }
-
-linkColor.forEach(l => l.addEventListener('click', colorLink))
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
