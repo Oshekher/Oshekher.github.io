@@ -61,24 +61,14 @@ var data = {
     ],
     search_method: [
         {
-            "name": "百度",
-            "icon": "baidu",
-            "url": "https://www.baidu.com/s?wd=%s"
-        },
-        {
-            "name": "必应",
+            "name": "Bing",
             "icon": "bing",
-            "url": "https://cn.bing.com/search?q=%s"
+            "url": "https://bing.com/search?q=%s"
         },
         {
-            "name": "谷歌",
+            "name": "Google",
             "icon": "google",
             "url": "https://www.google.com/search?q=%s"
-        },
-        {
-            "name": "360",
-            "icon": "360so",
-            "url": "https://www.so.com/s?q=%s"
         },
         {
             "name": "DuckDuckGo",
