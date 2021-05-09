@@ -21,11 +21,41 @@
     <link href="/m/css/bootstrap.min.css" rel="stylesheet">
     <link href="/m/css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <script defer src="/assets/js/app.js"></script>
   </head>
-  <body>
+  <body class="light">
+    <!-- Navbar -->
+
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">About</li>
+
+        <!-- Dropdown -->
+
+        <li class="nav-item has-dropdown">
+          <a href="#">Theme</a>
+          <ul class="dropdown">
+            <li class="dropdown-item">
+              <a id="light" href="#">light</a>
+            </li>
+            <li class="dropdown-item">
+              <a id="dark" href="#">dark</a>
+            </li>
+            <li class="dropdown-item">
+              <a id="solar" href="#">solarize</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">Login</li>
+      </ul>
+    </nav>
 
 <!--========== cyber ==========-->
-
+<main>
     <div class="container">
       <div class="listrows">
         <h4 id="sports"><img src="m/img/sports.png"> INDEX <img src="m/img/sports.png"></h4>
@@ -50,7 +80,7 @@
           <div class="col-md-3"><a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://t.me/PurityWasHere"><img src="m/ico/watchseries.ico">&nbsp;Contact</a></div>
         </div>
       </div>
- </div> <!--Container-->
+ </div> <!--Container--> </main>
     <div class="pattern"></div>
  </body>
 </html>
