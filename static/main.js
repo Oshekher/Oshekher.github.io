@@ -1,9 +1,13 @@
 /* ----
+
 # KStart
 # By: Dreamer-Paul
 # Last Update: 2020.6.6
+
 一个简洁不失细节的起始页
+
 本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
+
 ---- */
 
 var obj = {
@@ -42,34 +46,39 @@ var data = {
     window: 0,
     back_method: [
         {
-            "name": "No background"
+            "name": "无背景"
         },
         {
-            "name": "Random Anime Wallpapers",
+            "name": "随机动漫壁纸",
             "url": "https://api.paugram.com/wallpaper?source=gh",
             "set": "bottom right/60% no-repeat"
         },
         {
-            "name": "Bing Daily Wallpaper",
+            "name": "必应每日壁纸",
             "url": "https://api.paugram.com/bing",
             "set": "center/cover no-repeat"
         }
     ],
     search_method: [
         {
-            "name": "Google",
+            "name": "百度",
+            "icon": "baidu",
+            "url": "https://www.baidu.com/s?wd=%s"
+        },
+        {
+            "name": "必应",
+            "icon": "bing",
+            "url": "https://cn.bing.com/search?q=%s"
+        },
+        {
+            "name": "谷歌",
             "icon": "google",
             "url": "https://www.google.com/search?q=%s"
         },
         {
-            "name": "Bing",
-            "icon": "bing",
-            "url": "https://bing.com/search?q=%s"
-        },
-        {
-            "name": "Swisscows",
+            "name": "360",
             "icon": "360so",
-            "url": "https://swisscows.com/web?query=%s"
+            "url": "https://www.so.com/s?q=%s"
         },
         {
             "name": "DuckDuckGo",
