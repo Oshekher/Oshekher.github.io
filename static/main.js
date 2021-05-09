@@ -11,32 +11,11 @@
 ---- */
 
 var obj = {
-    header: {
-        updated: ks.select(".action-btn.updated"),
-        about: ks.select(".action-btn.about"),
-        setting: ks.select(".action-btn.setting")
-    },
     main: {
         select: ks.select(".search-select"),
         search: ks.select(".search-selector"),
         input: ks.select(".input-box input"),
         submit: ks.select(".input-box .btn"),
-        sites: ks.select(".navi-items"),
-        bg: ks.select(".navi-background")
-    },
-    window: {
-        wrap: ks.select("window"),
-        item: ks(".the-window"),
-        close: ks(".window-head button")
-    },
-    settings: {
-        search: ks.select("[name=search]"),
-        background: ks.select("[name=background]"),
-        sites: ks.select("[name=sites]")
-    },
-    settingBtn: {
-        reset: ks.select("[name=reset]"),
-        output: ks.select("[name=output]")
     }
 }
 
@@ -44,21 +23,6 @@ var data = {
     ver: "1.0.0",
     timer: "",
     window: 0,
-    back_method: [
-        {
-            "name": "无背景"
-        },
-        {
-            "name": "随机动漫壁纸",
-            "url": "https://api.paugram.com/wallpaper?source=gh",
-            "set": "bottom right/60% no-repeat"
-        },
-        {
-            "name": "必应每日壁纸",
-            "url": "https://api.paugram.com/bing",
-            "set": "center/cover no-repeat"
-        }
-    ],
     search_method: [
         {
             "name": "Bing",
@@ -101,17 +65,6 @@ var methods = {
             }
         }
 
-        localStorage.setItem("paul-navi", JSON.stringify(data.user));
-
-        ks.notice("设置已保存至本地！", {color: "green", time: 3000});
-    },
-    clear: function () {
-        localStorage.clear("paul-navi");
-        ks.notice("本地设置已清除，刷新页面后将读取默认配置！", {color: "green", time: 5000});
-    },
-    output: function () {
-        ks.notice("本功能制作中，敬请期待~", {color: "yellow", time: 3000});
-    },
     getUser: function () {
         var name = location.search.split("u=");
 
@@ -134,48 +87,7 @@ var methods = {
         </a>`
         });
     },
-    openWindow: function (key) {
-        data.window = key;
-        obj.window.wrap.classList.add("active");
-        obj.window.item[key].classList.add("active");
-    },
-    closeWindow: function () {
-        data.timer = clearTimeout(methods.closeWindow);
-
-        obj.window.item[data.window].classList.remove("closed");
-        obj.window.item[data.window].classList.remove("active");
-
-        obj.window.wrap.classList.remove("active");
-    },
-    closeWindow2: function () {
-        if(!data.timer){
-            data.timer = setTimeout(methods.closeWindow, 300);
-        }
-
-        obj.window.item[data.window].classList.add("closed");
-    },
-
-    form: {
-        multiple: function (type, select, data) {
-            // 读取表单转数组
-            if(type == "get"){
-                var selected = [];
-
-                for(var item of select){
-                    if(item.selected) selected.push(parseInt(item.value));
-                }
-
-                return selected;
-            }
-            // 读取数组转表单
-            else{
-                for(var item of data){
-                    select[item].selected = true;
-                }
-            }
-        }
-    },
-
+  
     setSetting: function () {
         var set = data.user;
 
@@ -191,44 +103,6 @@ var methods = {
                 case "select-multiple": type = "options"; break;
             }
 
-            // 是下拉框，遍历生成
-            if(obj.settings[item].type.indexOf("select") === 0 && obj.settings[item].dataset.key){
-                data[obj.settings[item].dataset.key].forEach((sitem, key) => {
-                    ks.create("option", {
-                        text: sitem.name,
-                        attr: {
-                            name: "value",
-                            value: key
-                        },
-                        parent: obj.settings[item]
-                    });
-                });
-            }
-
-            if(type !== "options"){
-                obj.settings[item][type] = set[item];
-
-                obj.settings[item].onchange = function (ev) {
-                    data.user[i] = ev.target[type];
-    
-                    methods.set();
-                }
-            }
-            else{
-                // 设置表单
-                methods.form.multiple("set", obj.settings[item], set[item]);
-
-                obj.settings[item].onchange = function (ev) {
-                    // 读取表单
-                    data.user[i] = methods.form.multiple("get", obj.settings[i], set[item]);
-
-                    methods.set();
-                }
-            }
-        }
-    }
-}
-
 // 搜索
 obj.main.select.onclick = function () {
     obj.main.search.classList.toggle("active");
@@ -236,49 +110,6 @@ obj.main.select.onclick = function () {
 obj.main.submit.onclick = (e) => {
     e.preventDefault();
     window.open(data.search_method[data.user.search].url.replace("%s", obj.main.input.value));
-}
-
-// 打开按钮
-obj.header.updated.onclick = function () {
-    methods.openWindow(0);
-    localStorage.setItem("paul-ver", data.ver);
-    obj.header.updated.classList.remove("active");
-}
-obj.header.about.onclick = function () {
-    methods.openWindow(1);
-}
-obj.header.setting.onclick = function () {
-    methods.openWindow(2);
-}
-
-// 关闭面板
-obj.window.wrap.onclick = function (e) {
-    if(e.target == obj.window.wrap){
-        methods.closeWindow2();
-    }
-}
-
-// 关闭按钮
-obj.window.close.each((item) => {
-    item.onclick = methods.closeWindow2;
-})
-
-data.search_method.forEach((item, key) => {
-    var a = ks.create("div", {
-        class: "item",
-        text: item.name,
-        parent: obj.main.search
-    });
-    a.onclick = () => methods.changeSearch(key);
-})
-
-// 重置按钮
-obj.settingBtn.reset.onclick = methods.clear;
-obj.settingBtn.output.onclick = methods.output;
-
-// 版本更新提示
-if(localStorage.getItem("paul-ver") !== data.ver){
-    obj.header.updated.classList.add("active");
 }
 
 // 初始化
