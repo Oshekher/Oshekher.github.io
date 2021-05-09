@@ -1,21 +1,26 @@
-/*===== DRAG and DROP =====*/
-const dropItems = document.getElementById('drop-items')
-
-new Sortable(dropItems, {
-    animation: 350,
-    chosenClass: "sortable-chosen",
-    dragClass: "sortable-drag",
-    store: {
-    	// We keep the order of the list
-    	set: (sortable) =>{
-    		const order = sortable.toArray()
-    		localStorage.setItem(sortable.options.group.name, order.join('|'))
-    	},
-
-    	// We get the order of the list
-    	get: (sortable) =>{
-    		const order = localStorage.getItem(sortable.options.group.name)
-    		return order ? order.split('|') : []
-    	}
+/*==================== SHOW NAVBAR ====================*/
+const showMenu = (headerToggle, navbarId) =>{
+    const toggleBtn = document.getElementById(headerToggle),
+    nav = document.getElementById(navbarId)
+    
+    // Validate that variables exist
+    if(headerToggle && navbarId){
+        toggleBtn.addEventListener('click', ()=>{
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
+            // change icon
+            toggleBtn.classList.toggle('bx-x')
+        })
     }
-});
+}
+showMenu('header-toggle','navbar')
+
+/*==================== LINK ACTIVE ====================*/
+const linkColor = document.querySelectorAll('.nav__link')
+
+function colorLink(){
+    linkColor.forEach(l => l.classList.remove('active'))
+    this.classList.add('active')
+}
+
+linkColor.forEach(l => l.addEventListener('click', colorLink))
